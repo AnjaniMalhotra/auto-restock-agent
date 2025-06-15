@@ -36,10 +36,10 @@ def get_wallet_names():
 
 # === Streamlit UI ===
 st.set_page_config(page_title="🛍️ Auto Restock Inventory", layout="centered")
-st.title("🛍️ Auto Restock Fashion Inventory")
+st.title("🛍️ Auto Inventory Restock Agent")
 st.markdown("""
 Welcome to the **Auto Restock Agent** powered by [PaymanAI](https://paymanai.com) 💸  
-This app helps fashion and jewelry sellers **automatically detect low-stock items** and trigger **TSD test payments** to restock vendors.
+This app helps  sellers **automatically detect low-stock items** and trigger **TSD test payments** to restock vendors.
 """)
 
 # Wallet selection
