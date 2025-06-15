@@ -4,13 +4,20 @@ import os
 import time
 from payman_sdk.client import PaymanClient
 from payman_sdk.types import PaymanConfig
+from dotenv import load_dotenv
+
+# === Load environment variables ===
+load_dotenv()  # Loads .env into os.environ
+
+PAYMAN_CLIENT_ID = os.getenv("PAYMAN_CLIENT_ID")
+PAYMAN_CLIENT_SECRET = os.getenv("PAYMAN_CLIENT_SECRET")
 
 # === Setup Payman Client ===
-
 config: PaymanConfig = {
-    'client_id': "PAYMAN_CLIENT_ID",
-    'client_secret': "PAYMAN_CLIENT_SECRET",
+    'client_id': PAYMAN_CLIENT_ID,
+    'client_secret': PAYMAN_CLIENT_SECRET,
 }
+
 client = PaymanClient.with_credentials(config)
 
 # === Log File Setup ===
@@ -95,7 +102,6 @@ if csv_file:
                     try:
                         st.info(f"⏳ Creating Payee: {item_name}")
                         create_response = client.ask(f"create {item_name} type test rails")
-                        st.write(f"🧾 Payee Creation Response: {create_response}")
                         time.sleep(2)
                     except Exception as e:
                         st.error(f"❌ Payee creation failed for {item_name}: {e}")
