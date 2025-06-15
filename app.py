@@ -4,10 +4,9 @@ import os
 import time
 from payman_sdk.client import PaymanClient
 from payman_sdk.types import PaymanConfig
-from dotenv import load_dotenv
+
 
 # === Load environment variables ===
-load_dotenv()  # Loads .env into os.environ
 
 PAYMAN_CLIENT_ID = os.getenv("PAYMAN_CLIENT_ID")
 PAYMAN_CLIENT_SECRET = os.getenv("PAYMAN_CLIENT_SECRET")
