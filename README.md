@@ -1,6 +1,6 @@
 # PAYMAN DEV CHALLENGE- AUTO INVENTORY RESTOCK AGENT
 
-🌐 **Live App**: 
+🌐 **Live App**: https://auto-restock-agent.streamlit.app/
 
 ---
 
