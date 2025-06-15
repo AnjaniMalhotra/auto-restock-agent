@@ -1,4 +1,4 @@
 streamlit
 pandas
-payman-sdk
-python-dotenv
+paymanai-sdk
+
